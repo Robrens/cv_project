@@ -1,0 +1,10 @@
+{%extends "cv/base.html"%}
+{% load static %}
+{% block css %}
+
+{%endblock%}
+{%block content%}
+<h1>{{experience.title}}</h1>
+<p>Du {{experience.start_the | date:"SHORT_DATE_FORMAT"}} au {{experience.end_the | date:"SHORT_DATE_FORMAT"}}</p>
+<p>{{experience.content | safe}}</p>
+{%endblock%}

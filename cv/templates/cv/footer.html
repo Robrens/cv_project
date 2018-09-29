@@ -1,0 +1,14 @@
+{% load static %}
+<footer class="fixed-bottom">
+    <ul>
+        {%for user in users %}
+        <li>{{user.address}}</li>
+        <li>{{user.mail}}</li>
+        <li>{{user.phone}}</li>
+        {% endfor %}
+    </ul>
+</footer>
+<script src="{% static 'jquery/dist/jquery.js' %}"></script>
+<script src="{% static 'bootstrap/dist/js/bootstrap.js' %}"></script>
+<script src="{% static 'parallax-js/dist/parallax.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
