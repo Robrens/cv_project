@@ -19,14 +19,15 @@
         <nav class="navbar justify-content-between">
             <a class="navbar-brand" href="{% url 'index' %}">Accueil</a>
             <ul>
-                {% for category in categories %}
-                <li><a href={% url 'category' category.slug %}>{{category.label}}</a></li>
-                {% endfor %}
+                <li><a href="{% url 'education' %}">Education</a></li>
+                <li><a href="{% url 'experiences' %}">Experiences</a></li>
+                <li><a href="{% url 'skills' %}">Skills</a></li>
+                <li><a href="{% url 'spare-time' %}">Spare-time</a></li>
             </ul>
 
         </nav>
     </header>
-    <main >
+    <main>
         {%block content%}
 
         {%endblock%}
@@ -34,7 +35,7 @@
         </div>
         </div>
     </main>
-{% include 'cv/footer.html'%}
+    {% include 'cv/footer.html'%}
 </body>
 
 </html>

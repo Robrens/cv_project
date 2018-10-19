@@ -1,0 +1,23 @@
+{%extends "cv/base.html"%}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/category.css' %}">
+<link rel="stylesheet" href="{% static 'css/skill.css' %}">
+{%endblock%}
+{%block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            
+            {%for category in categories%}
+            <h1>{{category.label}}</h1>
+            {%endfor%}
+            {% for abilitie in object_list %}
+        <div class="skillbar clearfix {{abilitie.lvl}}" data-percent="">
+                <div class="skillbar-title" style="background: #d35400;"><span>{{abilitie.title}}</span></div>
+                <div class="skillbar-bar" style="background: #e67e22;"></div>
+                <div class="skill-bar-percent">{{abilitie.lvl}}</div>
+            </div>
+            {% endfor %}
+        </div>
+        {%endblock%}

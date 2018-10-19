@@ -1,0 +1,32 @@
+{%extends "cv/base.html"%}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/category.css' %}">
+{%endblock%}
+{%block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+
+            {%for category in categories%}
+            <h1>{{category.label}}</h1>
+            {%endfor%}
+
+            {% for education in object_list %}
+            <div class="card main">
+                <div class="card-body xp">
+                    <img class="img" src={{education.cover.url}} alt="image">
+                    <h2> {{education.title}} </h2>
+                    <p class="presentation">from {{education.start_the | date:"SHORT_DATE_FORMAT"}} to
+                        {{education.end_the | date:"SHORT_DATE_FORMAT"}}</p>
+                    <p class="card-text">{{education.short_desc}}</p>
+                    <a href="{% url 'education-detail' education.slug %}" class="btn btn-primary" role="button">Lire</a>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+
+        {%endblock%}

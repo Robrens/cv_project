@@ -32,11 +32,11 @@ body {
                     h1{
                         text-align: center;
                     }
-                    .card {
+                    .main {
                         margin: 2rem;
                         height: 20rem;
 
-                        .card-body {
+                        .xp {
                             display: grid;
                             // grid-template-areas: "t t t" "a a a" ". . b";
                             grid-template-columns: repeat(5, 1fr);

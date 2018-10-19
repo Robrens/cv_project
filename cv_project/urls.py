@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from cv.views import IndexView, XpView, CategoryView
+from cv.views import IndexView, XpView, CategoryView, AbilitieView, SpareTimeView, ExperienceView, EducationView, EducView
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
@@ -25,6 +25,10 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', IndexView.as_view(), name='index'),
-    url(r'^cat/(?P<slug>[-\w]+)/$', CategoryView.as_view(), name='category'),
-    url(r'^experience/(?P<slug>[-\w]+)/$', XpView.as_view(), name='experience'),
+    url(r'^exp/$', ExperienceView.as_view(), name='experiences'),
+    url(r'^educ/$', EducationView.as_view(), name='education'),
+    url(r'^abilities/$', AbilitieView.as_view(), name='skills'),
+    url(r'^sparetime/$', SpareTimeView.as_view(), name='spare-time'),
+    url(r'^experience/(?P<slug>[-\w]+)/$', XpView.as_view(), name='experience-detail'),
+    url(r'^education/(?P<slug>[-\w]+)/$', EducView.as_view(), name='education-detail'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

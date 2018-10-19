@@ -5,6 +5,11 @@
 {%endblock%}
 {%block content%}
 <h1>{{experience.title}}</h1>
+{%if experience.start_the != empty%}
 <p>Du {{experience.start_the | date:"SHORT_DATE_FORMAT"}} au {{experience.end_the | date:"SHORT_DATE_FORMAT"}}</p>
 <p>{{experience.content | safe}}</p>
+{%else%}
+<p>{{experience.content | safe}}</p>
+{%endif%}
+
 {%endblock%}

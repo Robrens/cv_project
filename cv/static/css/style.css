@@ -13,30 +13,30 @@ body {
       display: inline-block; }
   body main .container .row div h1 {
     text-align: center; }
-  body main .container .row div .card {
+  body main .container .row div .main {
     margin: 2rem;
     height: 20rem; }
-    body main .container .row div .card .card-body {
+    body main .container .row div .main .xp {
       display: grid;
       grid-template-columns: repeat(5, 1fr); }
-      body main .container .row div .card .card-body .presentation {
+      body main .container .row div .main .xp .presentation {
         grid-row: 2;
         grid-column: 1/4;
         width: 70%; }
-      body main .container .row div .card .card-body h2 {
+      body main .container .row div .main .xp h2 {
         grid-row: 1;
         grid-column: 1/5;
         margin-left: 2rem;
         height: 1em; }
-      body main .container .row div .card .card-body .img {
+      body main .container .row div .main .xp .img {
         grid-row: 1;
         grid-column: 1/2;
         max-width: 2rem;
         max-height: 2rem; }
-      body main .container .row div .card .card-body .card-text {
+      body main .container .row div .main .xp .card-text {
         grid-row: 3;
         grid-column: 1/5; }
-      body main .container .row div .card .card-body .btn {
+      body main .container .row div .main .xp .btn {
         grid-row: 4;
         grid-column: 5; }
   body footer {

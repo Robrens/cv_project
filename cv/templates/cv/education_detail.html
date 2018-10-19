@@ -1,0 +1,15 @@
+{%extends "cv/base.html"%}
+{% load static %}
+{% block css %}
+
+{%endblock%}
+{%block content%}
+<h1>{{education.title}}</h1>
+{%if education.start_the != empty%}
+<p>Du {{education.start_the | date:"SHORT_DATE_FORMAT"}} au {{education.end_the | date:"SHORT_DATE_FORMAT"}}</p>
+<p>{{education.content | safe}}</p>
+{%else%}
+<p>{{education.content | safe}}</p>
+{%endif%}
+
+{%endblock%}

@@ -1,0 +1,27 @@
+{%extends "cv/base.html"%}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/category.css' %}">
+{%endblock%}
+{%block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+
+            {%for category in categories%}
+            <h1>{{category.label}}</h1>
+            {%endfor%}
+
+            {% for sparetime in object_list%}
+            <div class="card fun">
+                <div class="card-header head">
+                    <img class="card-img-top spare-time" src={{sparetime.cover.url}} alt="image">
+                </div>
+                <div class="card-body else">
+                    <h2> {{sparetime.title}} </h2>
+                    <p class="card-text">{{sparetime.short_desc}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+{%endblock%}
