@@ -38,7 +38,10 @@ body {
         grid-column: 1/5; }
       body main .container .row div .main .xp .btn {
         grid-row: 4;
-        grid-column: 5; }
+        grid-column: 5;
+        background-color: #d35400;
+        border-color: #ccbfbf;
+        vertical-align: center; }
   body footer {
     width: 100%;
     background-color: black; }

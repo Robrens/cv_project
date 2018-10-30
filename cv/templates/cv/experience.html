@@ -12,13 +12,13 @@
             <h1>{{category.label}}</h1>
             {%endfor%}
 
-            {% for experience in categories.label %}
+            {% for experience in object_list %}
             <div class="card main">
                 <div class="card-body xp">
                     <img class="img" src={{experience.cover.url}} alt="image">
                     <h2> {{experience.title}} </h2>
-                    <p class="presentation">from {{experience.start_the | date:"SHORT_DATE_FORMAT"}} to
-                        {{experience.end_the | date:"SHORT_DATE_FORMAT"}}</p>
+                    <p class="presentation">from {{experience.start_the}} to
+                        {{experience.end_the}}</p>
                     <p class="card-text">{{experience.short_desc}}</p>
                     <a href="{% url 'experience-detail' experience.slug %}" class="btn btn-primary" role="button">Lire</a>
                 </div>
